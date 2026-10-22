@@ -24,6 +24,15 @@
     .link { border:1px solid #47657c; border-radius:10px; padding:.78rem 1.1rem; text-decoration:none; font-weight:650; }
     .link:hover,.link:focus-visible { background:#173950; outline-offset:3px; }
     .secondary { color:#d7e5f0; border-color:#344b62; }
+    .primary { background:#8edcff; color:#081523; border-color:#8edcff; }
+    .primary:hover,.primary:focus-visible { background:#b9edff; color:#081523; }
+    .meta { display:flex; flex-wrap:wrap; gap:.55rem 1.15rem; color:#a8cfe7; font-size:.92rem; }
+    .fineprint { font-size:.93rem; }
+    .hash { display:block; margin:.45rem 0 1.2rem; padding:.75rem; border:1px solid #344b62; border-radius:8px; background:#081523; color:#bfe9ff; font-size:.75rem; overflow-wrap:anywhere; }
+    .panel h3 { margin:1.8rem 0 .5rem; font-size:1.05rem; }
+    .notice { border-left:3px solid #8edcff; padding:.15rem 0 .15rem 1rem; margin-top:1.3rem; }
+    a:focus-visible { outline:2px solid #e2f6ff; }
+
     footer { border-top:1px solid #294056; margin-top:3.5rem; padding-top:1.3rem; color:#93a6b8; font-size:.85rem; line-height:1.6; }
   </style>
 </head>
@@ -33,13 +42,30 @@
   <h1>FerretOS <span>Launcher</span></h1>
   <p class="lede">A Windows launcher for the private FerretOS World of Warcraft realm, featuring a custom frost-inspired interface, client selection, realm configuration and signature-verified launcher updates.</p>
   <section class="panel" aria-labelledby="download-title">
-    <div class="status">RELEASE PREPARATION</div>
-    <h2 id="download-title">Windows installer coming soon</h2>
-    <p>The official installer has not been published. Release signing, public update endpoints and fresh-install acceptance checks are being finalized. No CI sandbox or test-signed build will be offered as a public download.</p>
-    <div class="actions">
-      <a class="link" href="https://github.com/Zy312/ferretos-launcher-releases/releases">View GitHub Releases</a>
-      <a class="link secondary" href="https://github.com/Zy312/ferretos-launcher-releases">Release repository</a>
+    <div class="status">PUBLIC ALPHA &bull; WINDOWS &bull; v0.1.1</div>
+    <h2 id="download-title">Download FerretOS Launcher</h2>
+    <p>Frost UI 2.0 is here. Download the first public alpha of our Windows launcher, with client detection, realm configuration and Ed25519 signature-verified launcher updates.</p>
+    <div class="meta">
+      <span>Version 0.1.1</span>
+      <span>Windows 10 / 11</span>
+      <span>Per-user installation</span>
+      <span>Alpha pre-release</span>
     </div>
+    <div class="actions">
+      <a class="link primary" href="https://github.com/Zy312/ferretos-launcher-releases/releases/download/v0.1.1/FerretOS-Setup-0.1.1.exe">Download Windows installer (.exe)</a>
+      <a class="link secondary" href="https://github.com/Zy312/ferretos-launcher-releases/releases/download/v0.1.1/FerretOS-Launcher-0.1.1.zip">Download launcher archive (.zip)</a>
+      <a class="link secondary" href="https://github.com/Zy312/ferretos-launcher-releases/releases/tag/v0.1.1">Release notes on GitHub</a>
+    </div>
+    <div class="notice">
+      <p class="fineprint"><strong>Important:</strong> This first alpha installer supports <strong>clean installations only</strong>; it will refuse to overwrite an existing FerretOS Launcher installation or retained updater state. The installer is <strong>not Authenticode-signed</strong>, so Windows may display a SmartScreen reputation warning. Never disable your security protection to install software.</p>
+      <p class="fineprint">The download includes <strong>no World of Warcraft game files</strong>. To play, you need your own compatible WoW 3.3.5a client, separate approval for the private FerretOS realm and Tailscale access. Updates are checked using the official signed release manifest.</p>
+    </div>
+    <h3>Verify your download (SHA-256)</h3>
+    <p class="fineprint">Windows installer, FerretOS-Setup-0.1.1.exe</p>
+    <code class="hash">9a218ac6e8a9ef5536b691e14738f6c25ea2551e3bd3a37d0b71dab1167fce6d</code>
+    <p class="fineprint">Launcher archive, FerretOS-Launcher-0.1.1.zip</p>
+    <code class="hash">28e93327e1e0c17b1c091b4a73444715421607552381e5b93728019fd32a035a</code>
+    <p class="fineprint">Update metadata: <a href="https://zy312.github.io/ferretos-launcher-releases/release.json">Official Ed25519-signed release manifest</a>.</p>
   </section>
   <footer>Launcher downloads will not include World of Warcraft game content. Access to the private FerretOS game servers requires separate authorization. FerretOS is an independent community project and is not affiliated with or endorsed by Blizzard Entertainment.</footer>
 </main>
